@@ -2,8 +2,8 @@ extends layout
 
 block content
 	include header
-	.content
+	.container
 		.jumbotron
 			h1 Welcome to amvaloare
 			p Track your finances, manage your money and spend wisely! Get started right away!
-			p: .btn.btn-large.btn-primary Create an account
+			p: .btn.btn-large.btn-primary(onclick='document.location="/register"') Create an account
