@@ -13,7 +13,7 @@ register.render = function (req, res) {
 
 register.process = function (req, res) {
 
-	if (res.session.user)
+	if (req.session.user)
 		res.redirect('/');
 	else {
 
