@@ -1,4 +1,4 @@
-work-work-work
+MyMoney
 ==============
 
-TODO: add description
+MyMoney is an online financial tracker designed to help students manage their incomes and expenses.
