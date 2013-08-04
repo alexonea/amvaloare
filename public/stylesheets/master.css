@@ -47,3 +47,15 @@ h4.heading {
 	margin-top: 0px;
 	margin-bottom: 15px;
 }
+
+.clear {
+	clear: both;
+}
+
+.controls-group {
+	margin-bottom: 10px;
+}
+
+.controls-group .btn {
+	margin-left: 5px;
+}
