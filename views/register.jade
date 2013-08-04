@@ -2,16 +2,21 @@ extends layout
 
 block content
 	include header
-	.content
-		form(method='post', action='/register')
+	.container
+		.pull-left.fifty
+			h4 Get started today
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				| cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				| proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		form(method='post', action='/register', autocomplete='off').forth.pull-right
 			fieldset
 				legend Create a new account
 				.form-group
-					label(for='username') First name
-					input(type='text', class='form-control', name='username', id='username', placeholder='First name')
-				.form-group
-					label(for='username') Last name
-					input(type='text', class='form-control', name='username', id='username', placeholder='Last name')
-				.form-group
-					label(for='username') Username
-					input(type='text', class='form-control', name='username', id='username', placeholder='Username')
+					input(type='text', class='form-control', name='fullName', placeholder='Full Name')
+					input(type='text', class='form-control', name='email', placeholder='E-mail')
+					input(type='password', class='form-control', name='password', placeholder='Choose a password')
+					input(type='password', class='form-control', name='confirm', placeholder='Confirm your password')
+					input(type='submit', value='Create my account').btn.btn-large.btn-success

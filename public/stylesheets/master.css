@@ -15,6 +15,7 @@ a {
 .navbar {
 	padding: 0 100px;
 	background-color: #ffaa00;
+	margin-bottom: 50px;
 }
 
 a.navbar-brand, a.navbar-brand:hover {
@@ -25,10 +26,19 @@ a.navbar-brand, a.navbar-brand:hover {
 	color: #fff;
 }
 
-.content {
-	padding: 30px 100px;
+form input {
+	margin-bottom: 10px;
+	float: right;
 }
 
-.content h1 {
-	font-size: 60px;
+form legend {
+	text-align: center;
+}
+
+.forth {
+	width: 40%;
+}
+
+.fifty {
+	width: 50%;
 }
