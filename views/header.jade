@@ -4,5 +4,8 @@
 		li: a(href='#') My Account
 		li: a(href='#') Help
 	ul.nav.navbar-nav.pull-right
-		li: a(href='/register') Create account
-		li: a(href='#') Log In
+		- if (logged)
+			li: a(href='#') #{username}
+		- else
+			li: a(href='/register') Create account
+			li: a(href='/login') Log In

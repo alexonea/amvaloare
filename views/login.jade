@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	include header
+	.container
+		.pull-left.fifty
+			h4 Get started today
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				| tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				| quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				| consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				| cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				| proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		form(method='post', action='/login', autocomplete='off').forth.pull-right
+			fieldset
+				legend Log into your account
+				.form-group
+					input(type='text', class='form-control', name='email', placeholder='E-mail')
+					input(type='password', class='form-control', name='password', placeholder='Choose a password')
+					input(type='submit', value='Log In').btn.btn-large.btn-success
