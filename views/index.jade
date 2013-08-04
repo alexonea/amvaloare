@@ -10,7 +10,15 @@ block content
 				p: .btn.btn-large.btn-primary(onclick='document.location="/register"') Create an account
 		- else
 			h4.heading Today is #{date}
-			.panel
-				.panel-heading Current week
-				p Budget: £200
-				p Expenses: 0
+			.row
+				.col-lg-4
+					.panel
+						.panel-heading Current week
+						p Budget: £200
+						p Expenses: 0
+				.col-lg-4
+					.panel
+						.panel-heading Overview
+				.col-lg-4
+					.panel
+						.panel-heading Options
