@@ -1,8 +1,9 @@
 .navbar.navbar-static-top
 	a.navbar-brand(href='/') amvaloare
 	ul.nav.navbar-nav
-		li: a(href='#') My Account
-		li: a(href='#') Help
+		- if (logged)
+			li: a(href='#') My Account
+			li: a(href='#') Help
 	ul.nav.navbar-nav.pull-right
 		- if (logged)
 			li: a(href='#') #{username}

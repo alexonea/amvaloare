@@ -3,7 +3,14 @@ extends layout
 block content
 	include header
 	.container
-		.jumbotron
-			h1 Welcome to amvaloare
-			p Track your finances, manage your money and spend wisely! Get started right away!
-			p: .btn.btn-large.btn-primary(onclick='document.location="/register"') Create an account
+		- if (!logged)
+			.jumbotron
+				h1 Welcome to amvaloare
+				p Track your finances, manage your money and spend wisely! Get started right away!
+				p: .btn.btn-large.btn-primary(onclick='document.location="/register"') Create an account
+		- else
+			h4.heading Today is #{date}
+			.panel
+				.panel-heading Current week
+				p Budget: £200
+				p Expenses: 0
