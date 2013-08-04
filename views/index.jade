@@ -1,16 +1,9 @@
 extends layout
 
 block content
-	.navbar.navbar-static-top
-		a.navbar-brand(href='#') amvaloare
-		ul.nav.navbar-nav
-			li: a(href='#') My Accout
-			li: a(href='#') Help
-		ul.nav.navbar-nav.pull-right
-			li: a(href='#') Create account
-			li: a(href='#') Log In
+	include header
 	.content
 		.jumbotron
 			h1 Welcome to amvaloare
 			p Track your finances, manage your money and spend wisely! Get started right away!
-			p: .btn.btn-large.btn-warning Create an account
+			p: .btn.btn-large.btn-primary Create an account

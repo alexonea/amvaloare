@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	include header
+	.content
+		form(method='post', action='/register')
+			fieldset
+				legend Create a new account
+				.form-group
+					label(for='username') First name
+					input(type='text', class='form-control', name='username', id='username', placeholder='First name')
+				.form-group
+					label(for='username') Last name
+					input(type='text', class='form-control', name='username', id='username', placeholder='Last name')
+				.form-group
+					label(for='username') Username
+					input(type='text', class='form-control', name='username', id='username', placeholder='Username')
