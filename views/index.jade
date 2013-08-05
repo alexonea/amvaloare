@@ -11,8 +11,8 @@ block content
 		- else
 			h4.heading.pull-left Today is #{date}
 			.controls-group.pull-right
-				.btn.btn-success.btn-small: span.glyphicon.glyphicon-plus
-				.btn.btn-danger.btn-small: span.glyphicon.glyphicon-minus
+				.btn.btn-success.btn-small.add-income: span.glyphicon.glyphicon-plus
+				.btn.btn-danger.btn-small.add-expense: span.glyphicon.glyphicon-minus
 			.clear
 			.row
 				.col-lg-4
@@ -32,3 +32,4 @@ block content
 						p To record an expense you've made, just click on the red 
 							span.glyphicon.glyphicon-minus
 							|  button above.
+	include add-income
