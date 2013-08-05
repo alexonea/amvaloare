@@ -6,7 +6,11 @@
 			li: a(href='#') Help
 	ul.nav.navbar-nav.pull-right
 		- if (logged)
-			li: a(href='#') #{username}
+			li.dropdown
+				a(href='#', data-toggle='dropdown').dropdown-toggle #{username} 
+					span.glyphicon.glyphicon-user
+				ul(role='menu').dropdown-menu
+					li: a(href='#') Something
 		- else
 			li: a(href='/register') Create account
 			li: a(href='/login') Log In
