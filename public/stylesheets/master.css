@@ -22,8 +22,24 @@ a.navbar-brand, a.navbar-brand:hover {
 	color: #000;
 }
 
-.nav li a{
+.nav li a {
 	color: #fff;
+}
+
+.nav li a:focus{
+	background: #ffbf40 !important;
+}
+
+.dropdown-menu {
+	background: #474949;
+}
+
+.dropdown-menu li a:hover{
+	background: #3a3c3c !important;
+}
+
+.dropdown-menu span {
+	margin-right: 15px;
 }
 
 form input {

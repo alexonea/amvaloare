@@ -14,6 +14,11 @@ exports.index = function(req, res){
 	if (req.session.user) {
 		logged = 1;
 		user = req.session.user;
+		
+		if (user.currency == 'ron') user.currency = 'RON ';
+		if (user.currency == 'eur') user.currency = '€';
+		if (user.currency == 'usd') user.currency = '$';
+		if (user.currency == 'gbp') user.currency = '£';
 	}
 
 	var date = new Date();
@@ -22,5 +27,6 @@ exports.index = function(req, res){
 	dateString += days[date.getDay()] + ", " + date.getDate().toString() + " " + months[date.getMonth()] + " ";
 	dateString += date.getFullYear().toString();
 
-	res.render('index', { title: 'amvaloare', logged: logged, username: (user ? user.name : null), date: dateString });
+
+	res.render('index', { title: 'amvaloare', logged: logged, user: user, date: dateString });
 };

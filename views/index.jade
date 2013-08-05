@@ -18,7 +18,7 @@ block content
 				.col-lg-4
 					.panel
 						.panel-heading Current week
-						p Budget: £200
+						p Budget: #{user.currency}#{user.budget}
 						p Expenses: 0
 				.col-lg-4
 					.panel
@@ -26,5 +26,9 @@ block content
 				.col-lg-4
 					.panel
 						.panel-heading Help
-						p To record a new income source, click on the green 'plus' button above.
-						p To record an expense you've made, just click on the red 'minus' button above.
+						p To record a new income source, click on the green 
+							span.glyphicon.glyphicon-plus
+							|  button above.
+						p To record an expense you've made, just click on the red 
+							span.glyphicon.glyphicon-minus
+							|  button above.

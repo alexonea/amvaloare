@@ -7,10 +7,16 @@
 	ul.nav.navbar-nav.pull-right
 		- if (logged)
 			li.dropdown
-				a(href='#', data-toggle='dropdown').dropdown-toggle #{username} 
+				a(href='#', data-toggle='dropdown').dropdown-toggle #{user.name} 
 					span.glyphicon.glyphicon-user
 				ul(role='menu').dropdown-menu
-					li: a(href='#') Something
+					li: a(href='#'): small
+						span.glyphicon.glyphicon-cog
+						span Settings
+					li: a(href='/logout'): small
+						span.glyphicon.glyphicon-off
+						span Log out
+
 		- else
 			li: a(href='/register') Create account
-			li: a(href='/login') Log In
+			li: button(type='button', onclick='document.location="/login"').btn.btn-default.navbar-btn Log In

@@ -11,6 +11,7 @@ var express = require('express')
 
 routes.register = require('./routes/register');
 routes.login = require('./routes/login');
+routes.logout = require('./routes/logout');
 
 var app = express();
 
@@ -36,6 +37,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/register', routes.register.render);
 app.get('/login', routes.login.render);
+app.get('/logout', routes.logout);
 app.get('/users', user.list);
 
 app.post('/register', routes.register.process);

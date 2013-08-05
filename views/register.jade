@@ -16,10 +16,18 @@ block content
 				fieldset
 					legend Create a new account
 					.form-group
+						label Fill in the form below and you are ready to go
 						input(type='text', class='form-control', name='fullName', placeholder='Full Name')
 						input(type='text', class='form-control', name='email', placeholder='E-mail')
 						input(type='password', class='form-control', name='password', placeholder='Choose a password')
 						input(type='password', class='form-control', name='confirm', placeholder='Confirm your password')
+						.form-group
+							label(for='currency') Choose your preffered currency
+							select(name='currency', id='currency').form-control
+								option(value='usd') USD
+								option(value='eur') EUR
+								option(value='gbp') GBP
+								option(value='ron') RON
 						input(type='submit', value='Create my account').btn.btn-large.btn-success
 		- else
 			h3 Congratulations

@@ -24,6 +24,9 @@ register.process = function (req, res) {
 		user.name = req.body.fullName;
 		user.email = req.body.email;
 		user.password = md5sum.update(req.body.password.toString()).digest('hex');
+		user.budget = 0;
+		user.created = new Date();
+		user.currency = req.body.currency;
 
 		db.addUser(user, function (err) {
 			if (err)
