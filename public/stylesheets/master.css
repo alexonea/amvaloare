@@ -75,3 +75,17 @@ h4.heading {
 .controls-group .btn {
 	margin-left: 5px;
 }
+
+.currency {
+	width: 12px !important;
+}
+
+.inline {
+	width: 120px !important;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#recurring-options {
+	display: none;
+}

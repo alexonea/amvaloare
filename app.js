@@ -12,6 +12,7 @@ var express = require('express')
 routes.register = require('./routes/register');
 routes.login = require('./routes/login');
 routes.logout = require('./routes/logout');
+routes.update = require('./routes/update');
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.get('/users', user.list);
 
 app.post('/register', routes.register.process);
 app.post('/login', routes.login.process);
+app.post('/update/income', routes.update.income);
 
 http.createServer(app).listen(app.get('port'), function(){
 	console.log('Express server listening on port ' + app.get('port'));
