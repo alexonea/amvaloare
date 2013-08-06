@@ -1,17 +1,17 @@
 - if (user)
-	#add-income.modal.fade
+	#add-expense.modal.fade
 		.modal-dialog
 			.modal-content
 				.modal-header
 					button(type=button, data-dismiss='modal', aria-hidden='true').close &times;
-					h4.modal-title Record a new income
+					h4.modal-title Record a new expense
 				.modal-body
-					form(method='post', action='/update/income', id='add-income-form', autocomplete='off')
+					form(method='post', action='/update/expense', id='add-expense-form', autocomplete='off')
 						fieldset
 							.form-group
 								.input-group
 									span.input-group-addon: small: span.glyphicon.glyphicon-screenshot
-									input(type='text', name='endpoint', placeholder='Source').form-control
+									input(type='text', name='endpoint', placeholder='Destination').form-control
 							.form-group
 								.input-group
 									span.input-group-addon: small
@@ -29,8 +29,8 @@
 								.input-group
 									span.input-group-addon: small: span.glyphicon.glyphicon-tag
 									select(name='category', id='category').form-control
-										option(value='parents') Parents
-										option(value='jobs') Jobs
+										option(value='education') Education
+										option(value='food') food
 										option(value='others') Others
 							.form-group
 								label(for='date') Choose the date of the transaction
