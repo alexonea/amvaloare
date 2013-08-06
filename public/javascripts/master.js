@@ -6,15 +6,15 @@ $('.add-income').on('click', function (e) {
 	updateDate();
 });
 
-$('#recurring-label').on('click', function () {
+$('#recurring-label-income').on('click', function () {
 	toggleRecurringOptions(this);
 });
 
-$('#close').on('click', function () {
+$('#close-income').on('click', function () {
 	$('#add-income').modal('toggle');
 });
 
-$('#submit').on('click', function () {
+$('#submit-income').on('click', function () {
 	$('#add-income-form').submit();
 });
 
