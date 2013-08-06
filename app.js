@@ -44,6 +44,7 @@ app.get('/users', user.list);
 app.post('/register', routes.register.process);
 app.post('/login', routes.login.process);
 app.post('/update/income', routes.update.income);
+app.post('/update/expense', routes.update.expense);
 
 http.createServer(app).listen(app.get('port'), function(){
 	console.log('Express server listening on port ' + app.get('port'));
