@@ -7,7 +7,7 @@ $('.add-income').on('click', function (e) {
 });
 
 $('#recurring-label-income').on('click', function () {
-	toggleRecurringOptions(this);
+	toggleRecurringOptions(this, 'income');
 });
 
 $('#close-income').on('click', function () {
@@ -16,6 +16,23 @@ $('#close-income').on('click', function () {
 
 $('#submit-income').on('click', function () {
 	$('#add-income-form').submit();
+});
+
+$('.add-expense').on('click', function (e) {
+	$('#add-expense').modal();
+	updateDate();
+});
+
+$('#recurring-label-expense').on('click', function () {
+	toggleRecurringOptions(this, 'expense');
+});
+
+$('#close-expense').on('click', function () {
+	$('#add-expense').modal('toggle');
+});
+
+$('#submit-expense').on('click', function () {
+	$('#add-expense-form').submit();
 });
 
 var updateDate = function () {
@@ -30,9 +47,9 @@ var updateDate = function () {
     $('#date').val(today);
 };
 
-var toggleRecurringOptions = function (e) {
+var toggleRecurringOptions = function (e, form) {
 	if ($(e).children()[0].checked)
-		$('#recurring-options').show();
+		$('#recurring-options' + '-' + form).show();
 	else
-		$('#recurring-options').hide();
+		$('#recurring-options' + '-' + form).hide();
 };
