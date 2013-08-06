@@ -1,3 +1,5 @@
+var Database = require('../lib/database.js');
+var db = new Database();
 var update = new Object();
 
 update.income = function (req, res) {
@@ -5,9 +7,11 @@ update.income = function (req, res) {
 
 		var transaction = new Object();
 
+		transaction.id = db.ObjectId();
+		transaction.userId = req.session.user.id;
 		transaction.type = true;
 		transaction.endpoint = req.body.endpoint;
-		transaction.value = req.body.value;
+		transaction.value = parseInt(req.body.value);
 		transaction.date = req.body.date;
 		transaction.category = req.body.category;
 		transaction.recurring = (req.body.recurring) ? true : false;
@@ -17,8 +21,14 @@ update.income = function (req, res) {
 			transaction.unit = req.body.unit;
 		}
 		
-		console.log(transaction);
-		res.redirect('/');
+		db.addTransaction(transaction, function (err) {
+			if (err) console.log(err);
+
+			db.updateUserBudget(req.session.user.id, transaction.value, function (err) {
+				if (err) console.log(err);
+				res.redirect('/');
+			});
+		});
 
 	} else
 		res.redirect('/');

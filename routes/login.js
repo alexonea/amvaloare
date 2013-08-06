@@ -22,7 +22,7 @@ login.process = function (req, res) {
 		user.email = req.body.email;
 		user.password = md5sum.update(req.body.password.toString()).digest('hex');
 
-		db.findUser(user.email, function (err, data) {
+		db.findUserByEmail(user.email, function (err, data) {
 			if (err)
 				console.log(err);
 
