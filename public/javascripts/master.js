@@ -44,7 +44,7 @@ var updateDate = function () {
 
     var today = now.getFullYear() + "-" + (month) + "-" +(day) ;
 
-    $('#date').val(today);
+    $('.date-holder').val(today);
 };
 
 var toggleRecurringOptions = function (e, form) {
