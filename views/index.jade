@@ -17,12 +17,19 @@ block content
 			.row
 				.col-lg-4
 					.panel
-						.panel-heading Current week
-						p Budget: #{user.currency}#{user.budget}
-						p Expenses: 0
+						.panel-heading Overview
+						- if (user.budget < 0)
+							- budgetClass = 'red'
+						- if (user.budget > 0)
+							- budgetClass = 'green'
+						p Budget: 
+							b(class=budgetClass) #{user.currency}#{user.budget}
+						#history
+							.loading
 				.col-lg-4
 					.panel
-						.panel-heading Overview
+						.panel-heading Current week
+						p Expenses: 0
 				.col-lg-4
 					.panel
 						.panel-heading Help

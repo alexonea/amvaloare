@@ -11,3 +11,5 @@ html
 	script(src='/javascripts/jquery-1.9.1.js')
 	script(src='/javascripts/bootstrap.js')
 	script(src='/javascripts/master.js')
+	- if (logged && title == 'amvaloare')
+		script(src='/javascripts/syncclient.js')
