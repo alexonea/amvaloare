@@ -11,8 +11,10 @@ var sync = function (req, res) {
 
 		var options = {
 			userId: user.id,
-			type: type
 		};
+
+		if (type == 1) options.type = true;
+		if (type == -1) options.type = false;
 
 		switch (requestID) {
 		case 0:
@@ -30,8 +32,7 @@ var sync = function (req, res) {
 
 			db.findTransactions(options, function (err, data) {
 				if (err) console.log(err);
-				// console.log(data);
-				res.end(JSON.stringify(data));
+				res.render('history', { data: data });
 			});
 
 			break;

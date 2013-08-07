@@ -2,21 +2,11 @@ var getCurrentWeek = function () {
 	$.ajax({
 		type: "POST",
 		url: '/sync',
-		data: {rid: 0, type: true},
+		data: {rid: 0, type: 0},
 		success: function (json) {
 			if(json.trim()) {
-				var data = JSON.parse(json);
-
-				if (data.length == 0) {
-					$('#history')[0].innerHTML = '<i class="centre">No recent activity</i>';
-				} else {
-					$('#history')[0].innerHTML = '';
-
-					for (var i = 0; i < data.length; i++) {
-						$('#history')[0].innerHTML += '<p><b>' + data[i].value + '</b> on ' + data[0].date + '</p>';
-					}
-				}
-				
+				var data = json.trim();
+				$('#history')[0].innerHTML = data;
 			} else {
 				$('#history')[0].innerHTML = '<b class="red">Error</b>';
 			}

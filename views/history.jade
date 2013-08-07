@@ -1,0 +1,11 @@
+- for item in data
+	.media
+		a(href='#').pull-left
+			- if (item.type)
+				img.media-object(src='/images/income.png')
+			- else
+				img.media-object(src='/images/expense.png')
+		.media-body
+			h4.media-heading= item.endpoint
+			p= item.value
+			p= item.date
